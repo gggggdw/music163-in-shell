@@ -13,4 +13,4 @@ headers = {
 #command = "curl -H "Referer: {headers["Referer"]}" -H -H User-Agent:"{headers["User-Agent"]}"+url+" -o music.mp3"
 command = f'curl -s -L -H "Referer: {headers["Referer"]}" -H "User-Agent: {headers["User-Agent"]}" -o {song_id}.mp3 {url}'
 os.system(command)
-print('下载完成!!!')
+print('下载完成')

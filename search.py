@@ -6,6 +6,7 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 while True:
 # 搜索关键词
+    print("")
     keyword = input("搜索:")
     print("")
 
@@ -29,12 +30,22 @@ while True:
             name_set.add(name)
             print("歌名:"+name,"歌手:"+artist,"ID:",result['id'])
             print('-' * os.get_terminal_size().columns)
-    con = int(input("1继续2结束3下载id歌曲:"))
+    print("")
+    con = int(input("""1继续
+2结束
+3下载id歌曲
+
+>>>"""))
     if con == 1:
-        print("继续!")
+        print("")
+        print('-' * os.get_terminal_size().columns)
+        print("")
     if con == 2:
         break
     if con == 3:
+        print("")
+        print('-' * os.get_terminal_size().columns)
+        print("")
         os.system("python3 dl_song.py")
         break
  #print("------------------------------------------")
